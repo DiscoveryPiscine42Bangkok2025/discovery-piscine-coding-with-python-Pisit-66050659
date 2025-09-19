@@ -1,13 +1,14 @@
-user_input = input("Enter a string: ")
+import sys
 
-params = user_input.split()
-
-if len(params) != 1:
-    print("none")
-else:
-    s = params[0]
-    z_count = s.count('z')
-    if z_count == 0:
+if __name__ == "__main__":
+    try:
+        parameter = sys.argv[1]
+        if "z" in parameter:
+            for i in parameter:
+                if i == "z":
+                    print(i, end="")
+            print()
+        else:
+            print("none")
+    except IndexError:
         print("none")
-    else:
-        print("z" * z_count)
