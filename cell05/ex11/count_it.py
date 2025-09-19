@@ -1,8 +1,9 @@
-params = input("Enter parameters separated by spaces: ").split()
+import sys
 
-if not any(params):
-    print("none")
-else:
-    print(f"parameters: {len(params)}")
-    for param in params:
-        print(f"{param} {len(param)}")
+if __name__ == "__main__":
+    if len(sys.argv[1:]) > 0:
+        print(f"Parameters: {len(sys.argv[1:])}")
+        for i in sys.argv[1:]:
+            print(f"{i}: {len(i)}")
+    else:
+        print("none")
