@@ -1,8 +1,13 @@
-input_user = input("Enter something: ")
+import sys
+def main():
+    '''docstring'''
+    if len(sys.argv)==2:
+        para = input("What was the parameter? ")
+        if para == sys.argv[1]:
+            print("Good job!")
+        else:
+            print("Nope, sorry...")
+    else:
+        print("none")
 
-if input_user == "Hello" or input_user == "hello":
-    print("Good job!")
-elif input_user.isnumeric():
-    print("none")
-else:
-    print("Nope, sorry...")
+main()
