@@ -1,2 +1,4 @@
-input_para = input("Enter parameter : ").split()
-print(f" Number of parameters: {len(input_para)}")
+import sys
+
+if __name__ == "__main__":
+    print("Number of parameters:", len(sys.argv[1:]))
