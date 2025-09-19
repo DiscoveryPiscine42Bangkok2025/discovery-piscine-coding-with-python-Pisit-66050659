@@ -1,5 +1,8 @@
-input_para = input("Enter text: ").split()
-if len(input_para) == 1:
-    print(input_para[0].upper())
-elif len(input_para) > 1:
-    print("none")
+import sys
+
+if __name__ == "__main__":
+    try:
+        print(sys.argv[1].upper())
+    except IndexError:
+        print("none")
+
